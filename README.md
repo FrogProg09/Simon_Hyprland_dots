@@ -19,8 +19,8 @@
 | Notifications | [Swaync ⚠️](https://github.com/ErikReider/SwayNotificationCenter) |
 | Lock | [Hyprlock 🔒](https://github.com/hyprwm/hyprlock) |
 | Shell | [Zsh 🐚](https://zsh.sourceforge.io/) (in progress) |
-
-
+| Terminal | [Kitty 🐱](https://github.com/kovidgoyal/kitty) |
+| Power menu | [Wlogout ⏻](https://github.com/ArtsyMacaw/wlogout) |
 
 ![Image](https://github.com/user-attachments/assets/828b07a4-6e2a-472d-ad90-9cd37e728b4b)
 
@@ -38,7 +38,7 @@
 | ```Mod + B```	| Launch browser ($browser) |
 | ```Mod + P```	| Toggle pseudo mode (dwindle) |
 | ```Mod + J```	| Toggle split layout (dwindle) |
-| ```Mod + I``` |	Open custom option menu |
+| ```Mod + W``` |	Open power option menu |
 | ```Mod + PrintScreen``` | Take screenshot |
 
 
@@ -56,7 +56,7 @@
 
 - **Qt based software support**: qt6-wayland and qt5-wayland
   
-- **Fonts**: ttf-font-awesome
+- **Fonts**: ttf-jetbrains-mono-nerd
 
 - **Lock screen**: hyprlock
 
@@ -68,7 +68,7 @@
   
 - **App launcher**: rofi-wayland
 
-- **Options menu launcher**: wofi
+- **Power option menu**: wlogout
   
 - **Browser**: firefox
   
@@ -80,15 +80,15 @@
 
 - **Notification center**: swaync
 
-There are a few dependencies that you can install with commands below:
+You can install all dependencies with commands below:
 
-1. Can be installed with pacman
+1. Packages that can be installed with pacman
 ```bash
-sudo pacman -S networkmanager zsh pulseaudio bluez bluez-utils qt6-wayland qt5-wayland ttf-font-awesome hyprlock hyprpaper hyprland waybar rofi-wayland wofi firefox kitty dolphin curl
+sudo pacman -S networkmanager zsh pulseaudio bluez bluez-utils qt6-wayland qt5-wayland ttf-jetbrains-mono-nerd hyprlock hyprpaper hyprland waybar rofi-wayland wofi firefox kitty dolphin curl
 ```
-2. Can be installed with yay
+2. Packages that can be installed with yay
 ```bash
-yay -S hyprlock
+yay -S hyprlock wlogout
 ```
 There are also a few dependencies for notification center **swaync**:
 ```bash
@@ -96,9 +96,6 @@ sudo pacman -S swaync vala meson blueprint-compiler git scdoc sassc gtk4 gtk4-la
 ```
 
 # Instalation process (works only for arch and arch based distros)
-I've made instalation and setup script with help of [Frogprog](https://github.com/FrogProg09). I've tested it in vm and on bare metal (my pc). 
-Everyting seemed to work fine, but as coding rule says: "if code works on your machine it doesn't mean it have to on somone's other". 
-
 If everything worked, or didn't work at all, either way please contact me in discord.
 My nick is at [disclaimer](#Disclaimer) section.
 
@@ -125,14 +122,13 @@ My nick is at [disclaimer](#Disclaimer) section.
   bash setup.sh
 ```
 
-**3. Wait for installation to end.**
+**3. Wait for installation to end**
 
 **4. Do whatever installer potentionally told you to**
 
 **5. Reboot**
 
-Congratulation ! you've just installed your new shiny dotfiles.
-
+Congratulation ! You've just installed your new shiny dotfiles.
 
 # Credits
 
@@ -144,7 +140,7 @@ Congratulation ! you've just installed your new shiny dotfiles.
 
 # Disclaimer
 This project is still under development.
-Some configurations may not work (beacaucse I could paste them wrongly) or It could miss few dependencies (since knowing my self there's vey high chance I forgot about them), and changes will be made over time. 
+Some configurations may not work (beacaucse I could paste them wrongly) or It could miss few dependencies (since knowing my self there's vey high chance I forgot about them) there's also (not as big tho) chance of installe/setup script breaking, and changes will be made over time. 
 If you encounter any issues, feel free to DM me on discord, and I'll do my best to assist.
 
 My Discord user name is : szymonschabiak

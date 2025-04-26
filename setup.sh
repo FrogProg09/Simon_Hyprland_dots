@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+#fancy title
+cat << "HI"
+____       _
+/ ___|  ___| |_ _   _ _ __
+\___ \ / _ \ __| | | | '_ \
+___) |  __/ |_| |_| | |_) |
+|____/ \___|\__|\__,_| .__/
+                    |_|
+HI
 set -euo pipefail
 
 #================================================================
@@ -22,7 +31,7 @@ fi
 echo "${bold}Starting setup of Hyprland dotfiles...${normal}"
 
 # List of sub‑folders in .config to install
-declare -a apps=(hypr waybar swaync rofi scripts)
+declare -a apps=(hypr waybar swaync rofi scripts kitty wlogout)
 
 for app in "${apps[@]}"; do
   SRC="$DOTFILES_DIR/$app"
@@ -48,8 +57,22 @@ for app in "${apps[@]}"; do
   cp -r "$SRC"/. "$DEST"/
 done
 
+cat << "BYE-SETUP"
+ ____       _
+/ ___|  ___| |_ _   _ _ __   __      ____ _ ___
+\___ \ / _ \ __| | | | '_ \  \ \ /\ / / _` / __|
+ ___) |  __/ |_| |_| | |_) |  \ V  V / (_| \__ \
+|____/ \___|\__|\__,_| .__/    \_/\_/ \__,_|___/
+                     |_|
+                                  __       _
+ ___ _   _  ___ ___ ___  ___ ___ / _|_   _| |
+/ __| | | |/ __/ __/ _ \/ __/ __| |_| | | | |
+\__ \ |_| | (_| (_|  __/\__ \__ \  _| |_| | |
+|___/\__,_|\___\___\___||___/___/_|  \__,_|_|
+BYE-SETUP
 echo
 echo "${bold}Setup complete!${normal}"
 echo "Your configs live in ~/.config/{${apps[*]}}"
 echo "Old versions (if any) backed up as *-backup-<timestamp>."
-
+echo "run following commend to chose which network interface to use for waybar module"
+echo "bash ~/.config/scripts/set_waybar_iface.sh" 
